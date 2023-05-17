@@ -1,0 +1,374 @@
+/* Загальнi стилi*/
+*{
+	margin: 0;
+	padding: 0;
+  
+}
+
+/* Стиль для Тiла */
+html,
+body{
+  height: 100%; 
+  font-family: 'Uncut Sans', sans-serif;
+  font-size: 16px;
+  min-height: 100%;
+}
+
+/* Стиль для Головної частини */
+.main{
+display: block;
+flex-direction:row;
+height: 100%;
+}
+
+/* Стиль для Хедера */
+.main-head{
+  width: 100%;
+  height: 13vh;
+}
+
+.header-menu{
+  padding-right: 40px;
+}
+
+/* Стиль для Хедер-елементiв */
+.header-list{
+  display: flex;
+  position: relative;
+  align-items:center;
+  vertical-align: middle;
+  z-index: 2;
+}
+.header-list li{
+  list-style: none;
+  margin-left: 35px;
+  text-shadow: 1px 1px 1px #000;
+}
+.header-list li select:hover{
+  color: #92705b;
+}
+.header-link{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: none;
+}
+.header-link:hover {
+  color: #92705b;
+}
+
+/* Стилi для Значку-хедера */
+.header-logo {
+  flex: 0px 0px 60px;
+}
+.header-logo img{
+  max-width: 90px;
+  opacity:0.65;
+}
+.header-logo{
+  position: relative;
+  overflow: hidden;
+  z-index: 4;
+  margin-left: 15%;
+}
+.header-logo img{
+  margin-top: 3%;
+  max-width: 100px;
+}
+
+
+
+/*Стилi щодо змiни мови  */
+.select-lang{
+  width: 65px;
+  height: 40px;
+  border-radius: 5px 5px;
+  text-align: center;
+  justify-content: center;
+  background-color: #CFBBBB;
+  border: 1.5px solid black;
+}
+
+
+/* Стилi для Бургера */
+.main-side-bar header{
+  position: fixed;
+  width: 100%;
+  top:0;
+  left:0;
+  z-index: 50;
+}
+.container{
+max-width: 1120px;
+margin: 0 auto;
+padding: 0px 30px;
+}
+.main-side-bar header:before{
+  content: ' ';
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: #B19C90;
+  opacity:0.85;
+  z-index: 2;
+}
+.header-body{
+position: relative;
+display: flex;
+justify-content: space-between;
+height: 100px;
+align-items: center;
+}
+
+
+/* Стилi для Змiсту мейну */
+.container-item label{
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  text-shadow: 13px 13px 13px #000000;
+}
+
+.main-info{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1 1 auto;
+  background: url(/img/1470221116185566322.jpg);
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+.main-info h2{
+    padding-top: 150px;
+    padding-bottom: 45px;
+    color: white;
+}
+
+/* Стилi для Форми */
+.container-item {
+  padding: 16px;
+  display: inline-block; 
+  font-family: 'Mogra', cursive;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+}
+.container-item label button{
+  align-items: center;
+ justify-content: center;
+ text-align: center;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: block;
+  border: none;
+  box-shadow:0px -1px 7px 0px black
+  
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #664D3E;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 52%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  background-color:#B19C90;
+}
+
+
+/* Стилi для Футера */
+.main-footer{
+  height:40px;
+  width:100%;
+  color: white;
+  text-align: center;
+  background-color: #B19C90;
+  opacity:0.85;
+  text-shadow: 1px 1px 1px #000;
+} 
+
+
+
+
+/* Тiльки Медiа */
+
+/* Медiа, коли наше вiкно до 900 пикс */
+@media(max-width:900px) {
+  body.lock{
+    overflow: hidden;
+  }
+  .header-burger{
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 35px;
+    z-index: 3;
+  }
+  .header-burger span{
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .header-burger:before,
+  .header-burger:after{
+    content: " ";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header-burger:before{
+    top: 0;
+  }
+  .header-burger:after{
+    bottom: 0;
+  }
+
+  .header-burger.active:before{
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header-burger.active:after{
+    bottom: 9px;
+    transform: rotate(-45deg);
+  }
+  .header-burger.active span{
+    transform: scale(0);
+  }
+
+  .header-menu.active{
+    top: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header-menu{
+    position: fixed;
+    top:-100%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    overflow: auto;
+    background-color: #664d3e;
+    opacity:0.85;
+    padding: 135px 10px 30px 105px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header-menu.active{
+    top: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header-list{
+    display: block;
+    }
+  .header-list li{
+    margin: 0px 0px 45px 0px;
+    } 
+}
+/* Медiа, коли наше вiкно до 900 пикс */
+
+/* Медiа, колi вiкно меньше 600 пикс для колонок форми */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+  }
+}
+
+
+/* Медiа, колi вiкно меньше 2560 пикс загальної назви */
+@media (max-width:2560px) {
+    .main-info h2{
+        padding-top: -500px;
+        font-size: 45px;
+    }
+    
+}
+
+@media (max-width:579px) {
+  input[type=text], input[type=password] {
+    width: 90%;
+  }
+  footer{
+    font-size: 13px;
+  }
+  .main-info h2{
+    margin-top:-30px;
+  }
+}
+
+/* Медiа, колi вiкно меньше 1440 пикс загальної назви */
+@media (max-width:1440px) {
+    .main-info h2{
+        padding-top: -300px;
+        font-size: 43px;
+    }
+    
+}
+
+/* Медiа, колi вiкно меньше 1024 пикс загальної назви */
+@media (max-width:1024px) {
+    .main-info h2{
+        padding-top: 50px;
+        font-size: 36px;
+    }
+    
+}
+
+/* Медiа, колi вiкно меньше 768 пикс загальної назви */
+@media (max-width:768px) {
+    .main-info h2{
+        padding-top: 90px;
+        font-size: 30px;
+    }
+    
+}
+
+/* Медiа, колi вiкно меньше 425 пикс загальної назви */
+@media (max-width:425px) {
+    .main-info h2{
+        padding-top: 110px;
+        font-size: 26px;
+    }
+    
+}
+/* Медiа, колi вiкно меньше 767 пикс для змiни розмiра тексту футера */
+
+@media (max-width:1024px) {
+
+  .main-info
+  {
+    margin-top: 55px;
+  }
+  }
+@media (max-width:950px) {
+
+.main-info
+{
+  margin-top: 55px;
+}
+}
+  
