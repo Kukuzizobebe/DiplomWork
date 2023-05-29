@@ -1,0 +1,485 @@
+
+*{
+	margin: 0;
+	padding: 0;
+  
+}
+html,
+body{
+  min-height:100;
+  font-family: 'Uncut Sans','Times New Roman';
+  font-size: 16px;
+  background: url(/img/base-stations.webp);
+  background-size: cover;
+}
+
+
+
+.main-head{
+  width: 100%;
+  height: 13vh;
+}
+.main-info
+{
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-height: auto;
+  margin: 0 auto;
+}
+.header-menu{
+  padding-right: 40px;
+}
+.header-list{
+  display: flex;
+  position: relative;
+  align-items:center;
+  vertical-align: middle;
+  z-index: 2;
+}
+.header-list li{
+  list-style: none;
+  margin-left: 45px;
+  text-shadow: 1px 1px 1px #000;
+}
+.header-list li select:hover{
+  color: #92705b;
+}
+.header-link{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: none;
+}
+.header-link:hover {
+  color: #92705b;
+}
+.header-logo {
+  flex: 0px 0px 60px;
+}
+.header-logo img{
+  max-width: 90px;
+  opacity:0.65;
+}
+.header-logo{
+  position: relative;
+  overflow: hidden;
+  z-index: 4;
+  margin-left: 15%;
+}
+.header-logo img{
+  margin-top: 3%;
+  max-width: 100px;
+}
+
+
+.select-lang{
+  width: 65px;
+  height: 40px;
+  border-radius: 5px 5px;
+  text-align: center;
+  justify-content: center;
+  background-color: #CFBBBB;
+  border: 1.5px solid black;
+}
+select{
+  margin-left: 45px;
+}
+
+
+.header-burger.active span{
+  transform: scale(0);
+}
+.main-side-bar header{
+  position: fixed;
+  width: 100%;
+  top:0;
+  left:0;
+  z-index: 50;
+}
+.container{
+max-width: 1120px;
+margin: 0 auto;
+padding: 0px 30px;
+}
+.main-side-bar header:before{
+  content: ' ';
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: #B19C90;
+  opacity:0.85;
+  z-index: 2;
+}
+.header-body{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+}
+
+
+
+.table{
+  flex: 1 1 auto;
+  width: 100%;
+  margin-top: 130px;
+  background-color: white;
+  border-collapse: collapse;
+}
+.table th, .table td{
+  text-align: center;
+  padding: 30px;
+}
+.table th{
+  background-color: #CFBBBB;
+}
+.table th:nth-child(odd)
+{
+  background-color: #968B87;
+}
+.table tr:nth-child(even)
+{
+  background-color: #f5f5f5;
+}
+.table tr{
+  transition: all 0.3s;
+}
+.table tr:hover{
+  background-color: #ccc;
+}
+.table td:not(:last-child){
+  border-right: 1px solid #ccc;
+}
+.MinusOfServ{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+#minus1,#minus2,#minus3,#minus4,#minus5{
+  width: 35px;
+  height: 5px;
+  text-align: center;
+  font-weight: bold;
+  background-color: black;
+}
+.SendButton {
+  background-color: #664D3E;
+  color: white;
+  padding: 16px 20px;
+  margin: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 35%;
+  opacity: 0.9;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  
+}
+.SendButton:hover {
+  background-color:#B19C90;
+}
+.CleanButton {
+  background-color: #664D3E;
+  color: white;
+  padding: 16px 20px;
+  margin: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 35%;
+  opacity: 0.9;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+.CleanButton:hover {
+  background-color:#B19C90;
+}
+
+
+
+
+.main-footer{
+  height:40px;
+  width:100%;
+  color: white;
+  text-align: center;
+  background-color: #B19C90;
+  opacity:0.85;
+  text-shadow: 1px 1px 1px #000;
+}
+
+@media(max-width:1270px) {
+  .CleanButton ,.SendButton{
+    margin-bottom: 46px;
+  }
+  .main-info{
+    margin-bottom: 40px;
+  }
+}
+@media(max-width:900px) {
+  body.lock{
+    overflow: hidden;
+  }
+  .header-burger{
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 35px;
+    z-index: 3;
+  }
+  .header-burger span{
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .header-burger:before,
+  .header-burger:after{
+    content: " ";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header-burger:before{
+    top: 0;
+  }
+  .header-burger:after{
+    bottom: 0;
+  }
+
+  .header-burger.active:before{
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header-burger.active:after{
+    bottom: 9px;
+    transform: rotate(-45deg);
+  }
+  .header-burger.active span{
+    transform: scale(0);
+  }
+
+  .header-menu.active{
+    top: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header-menu{
+    position: fixed;
+    top:-100%;
+    left: 0;
+    width: 100%;
+    height: 72.5%;
+    overflow: auto;
+    background-color: #664d3e;
+    opacity:0.85;
+    padding: 135px 10px 30px 105px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header-menu.active{
+    top: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header-list{
+    display: block;
+    }
+  .header-list li{
+    margin: 0px 0px 45px 0px;
+    } 
+}
+
+  @media (max-width:600px) {
+    .main-info{
+      padding-top: 123px;
+      height: 100%;
+      width: 100%;
+    }
+    .table{
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin-top: 150px;
+    }
+    .table thead,.table tbody,.table thead th{
+      display: block;
+    }
+    .table thead{
+      float: left;
+      font-size: 16px;
+      width: 33%;
+    }
+    .table tbody{
+      overflow-x: auto;
+      width: 65%;
+    }
+    .table tbody tr{
+      display: table-cell;
+      border-right: 1px solid #ccc;
+    }
+    .table td{
+      display: block;
+      font-size: 15px;
+      height: 39px;
+      
+    }
+    .table td{
+      border-right: none;
+    }
+  }
+  @media (max-width:517px) {
+    .main-info{
+      padding-top: 123px;
+      height: 100%;
+      width: 100%;
+    }
+    .table{
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin-top: 150px;
+    }
+    .table thead,.table tbody,.table thead th{
+      display: block;
+    }
+    .table thead{
+      float: left;
+      font-size: 16px;
+      width: 30%;
+    }
+    .table tbody{
+      overflow-x: auto;
+      width: 65%;
+    }
+    .table tbody tr{
+      display: table-cell;
+      border-right: 1px solid #ccc;
+    }
+    .table td{
+      display: block;
+      font-size: 15px;
+      height: 55px;
+      
+    }
+    .table td{
+      border-right: none;
+    }
+  }
+  @media (max-width:517px) {
+    .CleanButton, .SendButton{
+      font-size: 11px;
+      padding-bottom: 15px;
+      text-align: center;
+    }
+  }
+  @media (max-width:424px) {
+    .CleanButton, .SendButton{
+      font-size: 10px;
+      padding-bottom: 15px;
+      text-align: center;
+    }
+    .main-info{
+      padding-top: 123px;
+      height: 100%;
+      width: 100%;
+    }
+    .table{
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin-top: 150px;
+    }
+    .table thead,.table tbody,.table thead th{
+      display: block;
+    }
+    .table thead{
+      float: left;
+      font-size: 16px;
+      width: 35%;
+    }
+    .table tbody{
+      overflow-x: auto;
+      width: 65%;
+    }
+    .table tbody tr{
+      display: table-cell;
+      border-right: 1px solid #ccc;
+    }
+    .table td{
+      display: block;
+      font-size: 15px;
+      height: 54px;
+      
+    }
+    .table td{
+      border-right: none;
+    }
+  }
+  @media (max-width:400px) {
+    .CleanButton,.SendButton{
+     font-size: 9px;
+     padding-bottom: 15px;
+     text-align: center;
+   }
+ }
+
+ @media (max-width:325px) {
+  .CleanButton, .SendButton{
+    font-size: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .main-info{
+    padding-top: 123px;
+    height: 100%;
+    width: 100%;
+  }
+  .table{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 150px;
+  }
+  .table thead,.table tbody,.table thead th{
+    display: block;
+  }
+  .table thead{
+    float: left;
+    font-size: 16px;
+    width: 33%;
+  }
+  .table tbody{
+    overflow-x: auto;
+    width: 50%;
+    padding-left: 45px;
+  }
+  .table tbody tr{
+    display: table-cell;
+    border-right: 1px solid #ccc;
+  }
+  .table td{
+    display: block;
+    font-size: 15px;
+    height: 54px;
+    
+  }
+  .table td{
+    border-right: none;
+  }
+}
+  @media (max-width:579px) {
+  
+    footer{
+      font-size: 12px;
+    }
+  }
