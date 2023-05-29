@@ -4,7 +4,7 @@ if(window.openDatabase){
     tx.executeSql('CREATE TABLE IF NOT EXISTS Languages (id INTEGER PRIMARY KEY,lang TEXT)');
   }),
   db.transaction(function(tx){
-    tx.executeSql('INSERT INTO Languages (id,lang) VALUES (1,"0")');
+    tx.executeSql('INSERT INTO Languages (id,lang) VALUES (1,"#UA")');
   }),
   db.transaction(function (tx) {    
   tx.executeSql('CREATE TABLE Users (id INTEGER PRIMARY KEY,Email TEXT,Password TEXT)'); 
