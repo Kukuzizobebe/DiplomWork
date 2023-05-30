@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded',()=>{
    
     let isValid=false;
 
-    const RegExpNamLast=/^[a-zA-Z'][a-zA-Z-' ]+[a-zA-Z']?$/;
+    const RegExpNamLast=/^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/;
     const RegExpTel=/^\+380\d{3}\d{2}\d{2}\d{2}$/;
     const RegExpEmail=/^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/u
-    const RegExpComm=/^[a-z0-9][a-z0-9\s]{0,98}[a-z0-9]$/i
+  
     if(languag=='#UA')
     {
         firstName.placeholder="Введіть ваше ім'я..."
@@ -100,23 +100,6 @@ document.addEventListener('DOMContentLoaded',()=>{
                 }
                 else{
                     elem.nextElementSibling.textContent="Fill in the email field correctly!"
-                }      
-            }
-            else{
-                elem.nextElementSibling.textContent="";
-
-               
-            }
-        }
-        if(elem.name=='subject')
-        {
-            if(!RegExpComm.test(elem.value)&&elem.value!=0){
-                if(languag=='#UA')
-                {
-                    elem.nextElementSibling.textContent="Заповніть корректно поле опис проблеми!"
-                }
-                else{
-                    elem.nextElementSibling.textContent="Fill in the describe problem field correctly!"
                 }      
             }
             else{
