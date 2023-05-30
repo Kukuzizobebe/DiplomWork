@@ -28,7 +28,7 @@
    
 
 
-    const RegExpNamLast=/^[a-zA-Z'][a-zA-Z-' ]+[a-zA-Z']?$/;
+    const RegExpNamLast=/^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/;
     const RegExpTel=/^\+380\d{3}\d{2}\d{2}\d{2}$/;
     if(languag=='#UA')
     {
